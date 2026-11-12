@@ -1,0 +1,741 @@
+{
+    "sections" : 
+    [
+        {
+            "key" : "BANNER",
+            "sort_order" : 0,
+            "label" : "Banner",
+            "section_details" : [
+                {
+                    "key" : "LIST",
+                    "value" : null,
+                    "json_value" : null,
+                    "section_detail_items" : [
+                        {            
+                            "sort_order" : 1,
+                            "content" : [
+                                {
+                                    "key" : "BACKGROUND",
+                                    "value" : "sample_storage/landscape.jpg",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "TITLE",
+                                    "value" : "Tampines St 94 GLS New Launch",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "DESCRIPTION",
+                                    "value" : "Prime development only 3 minutes walk to Tampines West MRT!",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "BUTTON",
+                                    "value" : null,
+                                    "json_value" : {
+                                        "title" : "Book Showflat Viewing Today",
+                                        "subtitle" : null,
+                                        "icon" : null,
+                                        "link" : "https://tampinesgls.showflatpreview.sg/#contact"
+                                    }
+                                }
+                            ]
+                        },
+                        {            
+                            "sort_order" : 2,
+                            "content" : [
+                                {
+                                    "key" : "BACKGROUND",
+                                    "value" : "sample_storage/landscape.jpg",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "TITLE",
+                                    "value" : "CHANGI GENERAL HOSPITAL",
+                                    "json_value" : null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key" : "LIST",
+                    "value" : "Tampines Street 94 New Launch Offers Unmatched Convenience at Your Doorstep",
+                    "json_value" : null,
+                    "section_detail_items" : [
+                        {            
+                            "sort_order" : 1,
+                            "content" : [
+                                {
+                                    "key" : "TITLE",
+                                    "value" : "Prime Location at Tampines Street 94",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "DESCRIPTION",
+                                    "value" : "Mixed-use development near Tampines West MRT, offering seamless connectivity in District 18.",
+                                    "json_value" : null
+                                }
+                            ]
+                        },
+                        {            
+                            "sort_order" : 2,
+                            "content" : [
+                                {
+                                    "key" : "TITLE",
+                                    "value" : "Excellent Public Transport Access",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "DESCRIPTION",
+                                    "value" : "3-minute walk to Tampines West MRT and easy access to major expressways like PIE & TPE.",
+                                    "json_value" : null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                
+                {
+                    "key" : "BUTTON",
+                    "value" : null,
+                    "json_value" : {
+                        "title" : "REGISTER YOUR INTEREST",
+                        "subtitle" : null,
+                        "icon" : null,
+                        "link" : "https://tampinesgls.showflatpreview.sg/#contact"
+                    }
+                }
+                
+            ]
+        },
+
+        {
+            "key" : "HERO",
+            "sort_order" : 1,
+            "label" : "Hero Banner",
+            "section_details" : [
+                {
+                    "key" : "BACKGROUND",
+                    "value" : "sample_storage/landscape.jpg",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                },
+                {
+                    "key" : "CONTENT",
+                    "value" : "Limited Units Available! ..",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                },
+                {
+                    "key" : "REGISTER_BUTTON",
+                    "value" : null,
+                    "json_value" : {
+                        "title" : "Register for VVIP Access",
+                        "subtitle" : "imited Units Available – Act Fast!",
+                        "icon" : null,
+                        "link" : "https://tampinesgls.showflatpreview.sg/#contact"
+                    },
+                    "section_detail_items" : []
+                }
+            ]
+        },
+        {
+            "key" : "ABOUT",
+            "sort_order" : 2,
+            "label" : "About Us",
+            "section_details" : [
+                {
+                    "key" : "IMAGE",
+                    "value" : "sample_storage/landscape.jpg",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                },
+                {
+                    "key" : "TITLE",
+                    "value" : "Future Growth and Investment Potential in Tampines Street 94",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                },
+                {
+                    "key" : "CONTENT",
+                    "value" : "The Tampines Street 94 new launch by Hoi Hup Realty and Sunway Developments is an exciting mixed-use development located i..",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                }
+            ]
+        },
+        {
+            "key" : "E_BROCHURE",
+            "sort_order" : 3,
+            "label" : "E-Brocure",
+            "section_details" : [
+                {
+                    "key" : "TITLE",
+                    "value" : "Get Your Tampines St 94 GLS E-Brochure Now!",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                },
+                {
+                    "key" : "DESCRIPTION",
+                    "value" : "Explore Tampines St 94 GLS in detail with our comprehensive E-Brochure! Discover its impressive amenities and exciting upcoming developments.",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                },
+                {
+                    "key" : "BUTTON",
+                    "value" : null,
+                    "json_value" : {
+                        "title" : "REQUEST E-BROCHURE",
+                        "subtitle" : null,
+                        "icon" : null,
+                        "link" : "https://tampinesgls.showflatpreview.sg/#contact"
+                    }
+                },
+                {
+                    "key" : "IMAGE",
+                    "value" : "sample_storage/landscape.jpg",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                }
+            ]
+        },
+        {
+            "key" : "LOCATION",
+            "sort_order" : 4,
+            "label" : "Location",
+            "section_details" : [
+                {
+                    "key" : "HIGLIGHT",
+                    "value" : null,
+                    "json_value" : null,
+                    "section_detail_items" : [
+                        {            
+                            "sort_order" : 1,
+                            "content" : [
+                                {
+                                    "key" : "BACKGROUND",
+                                    "value" : "sample_storage/landscape.jpg",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "TITLE",
+                                    "value" : "EAST POINT MALL",
+                                    "json_value" : null
+                                }
+                            ]
+                        },
+                        {            
+                            "sort_order" : 2,
+                            "content" : [
+                                {
+                                    "key" : "BACKGROUND",
+                                    "value" : "sample_storage/landscape.jpg",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "TITLE",
+                                    "value" : "CHANGI GENERAL HOSPITAL",
+                                    "json_value" : null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key" : "LIST",
+                    "value" : "Tampines Street 94 New Launch Offers Unmatched Convenience at Your Doorstep",
+                    "json_value" : null,
+                    "section_detail_items" : [
+                        {            
+                            "sort_order" : 1,
+                            "content" : [
+                                {
+                                    "key" : "TITLE",
+                                    "value" : "Prime Location at Tampines Street 94",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "DESCRIPTION",
+                                    "value" : "Mixed-use development near Tampines West MRT, offering seamless connectivity in District 18.",
+                                    "json_value" : null
+                                }
+                            ]
+                        },
+                        {            
+                            "sort_order" : 2,
+                            "content" : [
+                                {
+                                    "key" : "TITLE",
+                                    "value" : "Excellent Public Transport Access",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "DESCRIPTION",
+                                    "value" : "3-minute walk to Tampines West MRT and easy access to major expressways like PIE & TPE.",
+                                    "json_value" : null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                
+                {
+                    "key" : "TITLE",
+                    "value" : "Location",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                },
+                {
+                    "key" : "BUTTON",
+                    "value" : null,
+                    "json_value" : {
+                        "title" : "REGISTER YOUR INTEREST",
+                        "subtitle" : null,
+                        "icon" : null,
+                        "link" : "https://tampinesgls.showflatpreview.sg/#contact"
+                    }
+                }
+                
+                
+            ]
+        },
+        {
+            "key" : "UNIT_TYPES_ACCORDION",
+            "sort_order" : 5,
+            "label" : "Unit Types Accordion",
+            "section_details" : [
+                {
+                    "key" : "IMAGE",
+                    "value" : "sample_storage/landscape.jpg",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                },
+                {
+                    "key" : "TITLE",
+                    "value" : "UNIT TYPES",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                },
+                {
+                    "key" : "DESCRIPTION",
+                    "value" : "Tampines St 94 GLS PRICING *subject to change & availability",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                },
+                {
+                    "key" : "LIST",
+                    "value" : null,
+                    "json_value" : null,
+                    "section_detail_items" : [
+                        {            
+                            "sort_order" : 1,
+                            "content" : [
+                                {
+                                    "key" : "TITLE",
+                                    "value" : "Tampines St 94 GLS Units - 1 Bedroom",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "DESCRIPTION",
+                                    "value" : "Register your interest here to receive the latest details on Tampines St 94 GLS, including the unit mix and layouts.",
+                                    "json_value" : null
+                                }
+                            ]
+                        },
+                        {            
+                            "sort_order" : 2,
+                            "content" : [
+                                {
+                                    "key" : "TITLE",
+                                    "value" : "Tampines St 94 GLS Units - 2 Bedroom",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "DESCRIPTION",
+                                    "value" : "Register your interest here to receive the latest details on Tampines St 94 GLS, including the unit mix and layouts.",
+                                    "json_value" : null
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key" : "UNIT_TYPES",
+            "sort_order" : 6,
+            "label" : "Tampines St 94 GLS floorplans",
+            "section_details" : [
+                {
+                    "key" : "BUTTON",
+                    "value" : null,
+                    "json_value" : {
+                        "title" : "Download all floor plan",
+                        "subtitle" : null,
+                        "icon" : null,
+                        "link" : "https://tampinesgls.showflatpreview.sg/#contact"
+                    }
+                },
+                {
+                    "key" : "LIST",
+                    "value" : "Tampines Street 94 New Launch Offers Unmatched Convenience at Your Doorstep",
+                    "json_value" : null,
+                    "section_detail_items" : [
+                        {            
+                            "sort_order" : 1,
+                            "content" : [
+                                {
+                                    "key" : "IMAGE",
+                                    "value" : "sample_storage/landscape.jpg",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "TITLE",
+                                    "value" : "Tampines St 94 GLS Floorplans - 1 Bedroom",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "DESCRIPTION",
+                                    "value" : "Disclaimer: The floor plans, images, and other visuals are not to scale and are for illustration only. They are intended to provide a general idea of the layout and may not reflect actual dimensions or features. All information is subject to change. Accuracy of specifications or dimensions is not guaranteed. These materials are for seeking indications of interest and do not form part of any contract.",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "BUTTON",
+                                    "value" : "Prime Location at Tampines Street 94",
+                                    "json_value" : {
+                                        "title" : "VIEW FLOOR PLAN",
+                                        "subtitle" : null,
+                                        "icon" : null,
+                                        "link" : null
+                                    }
+                                }
+                            ]
+                        },
+                        {            
+                            "sort_order" : 2,
+                            "content" : [
+                                {
+                                    "key" : "IMAGE",
+                                    "value" : "sample_storage/landscape.jpg",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "TITLE",
+                                    "value" : "Tampines St 94 GLS Floorplans - 2 Bedroom",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "DESCRIPTION",
+                                    "value" : "Disclaimer: The floor plans, images, and other visuals are not to scale and are for illustration only. They are intended to provide a general idea of the layout and may not reflect actual dimensions or features. All information is subject to change. Accuracy of specifications or dimensions is not guaranteed. These materials are for seeking indications of interest and do not form part of any contract.",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "BUTTON",
+                                    "value" : "Prime Location at Tampines Street 94",
+                                    "json_value" : {
+                                        "title" : "VIEW FLOOR PLAN",
+                                        "subtitle" : null,
+                                        "icon" : null,
+                                        "link" : null
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key" : "SHOWFLAT_VIEWING",
+            "sort_order" : 7,
+            "label" : "SHOWFLAT_VIEWING",
+            "section_details" : [
+                {
+                    "key" : "IMAGE",
+                    "value" : "sample_storage/landscape.jpg",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                },
+                {
+                    "key" : "TITLE",
+                    "value" : "SHOWFLAT VIEWING",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                },
+                {
+                    "key" : "DESCRIPTION",
+                    "value" : "Tampines St 94 GLS Sales Gallery is Strictly by Appointment only. Contact us now to receive your invitation to visit our showflat.",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                },
+                {
+                    "key" : "BUTTON",
+                    "value" : null,
+                    "json_value" : {
+                        "title" : "SHOWFLAT HOTLINE: +65 9876 5023",
+                        "subtitle" : null,
+                        "icon" : null,
+                        "link" : "tel : +65 9876 5023"
+                    }
+                },
+                {
+                    "key" : "BUTTON",
+                    "value" : null,
+                    "json_value" : {
+                        "title" : "REQUEST SHOWFLAT VIEWING",
+                        "subtitle" : null,
+                        "icon" : null,
+                        "link" : "https://tampinesgls.showflatpreview.sg/#contact"
+                    }
+                }
+            ]
+        },
+        {
+            "key" : "FAQ",
+            "sort_order" : 8,
+            "label" : "Faq",
+            "section_details" : [
+                {
+                    "key" : "LIST",
+                    "value" : null,
+                    "json_value" : null,
+                    "section_detail_items" : [
+                        {            
+                            "sort_order" : 1,
+                            "content" : [
+                                {
+                                    "key" : "TITLE",
+                                    "value" : "Where is the showflat for Tampines St 94 GLS?",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "DESCRIPTION",
+                                    "value" : "Register your interest here to get the latest details on Tampines St 94 GLS new launch, including the showflat address.",
+                                    "json_value" : null
+                                }
+                            ]
+                        },
+                        {            
+                            "sort_order" : 2,
+                            "content" : [
+                                {
+                                    "key" : "TITLE",
+                                    "value" : "What is the number of units available at Tampines St 94 GLS?",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "DESCRIPTION",
+                                    "value" : "Tampines St 94 GLS offer 585 residential units",
+                                    "json_value" : null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key" : "IMAGE",
+                    "value" : "sample_storage/landscape.jpg",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                }
+            ]
+        },
+        {
+            "key" : "NEXT_STEP",
+            "sort_order" : 9,
+            "label" : "NEXT STEP",
+            "section_details" : [
+                {
+                    "key" : "TITLE",
+                    "value" : "HOW DO YOU WANT TO TAKE THE NEXT STEP?",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                },
+                {
+                    "key" : "LIST",
+                    "value" : "The Tampines St 94 GLS is coming soon in, here’s how you can learn more: ",
+                    "json_value" : null,
+                    "section_detail_items" : [
+                        {            
+                            "sort_order" : 1,
+                            "content" : [
+                                {
+                                    "key" : "BACKGROUND",
+                                    "value" : "sample_storage/landscape.jpg",
+                                    "json_value" : null,
+                                    "section_detail_items" : []
+                                },
+                                {
+                                    "key" : "SUBTITLE",
+                                    "value" : "SUBSCRIBE NOW FOR FIRSTHAND INFORMATION",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "TITLE",
+                                    "value" : "GET PREVIEW ACCESS",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "DESCRIPTION",
+                                    "value" : "✓ Get the E-Brochure +  Floor Plans + Viewing Invitation the moment they are released by the developer!",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "BUTTON",
+                                    "value" : null,
+                                    "json_value" : {
+                                        "title" : "GET PREVIEW ACCESS",
+                                        "subtitle" : "PREVIEW INVITE + PRICE LIST + FLOOR PLANS",
+                                        "icon" : null,
+                                        "link" : "https://tampinesgls.showflatpreview.sg/#contact"
+                                    }
+                                }   
+                            ]
+                        },
+                        {            
+                            "sort_order" : 2,
+                            "content" : [
+                                {
+                                    "key" : "BACKGROUND",
+                                    "value" : "sample_storage/landscape.jpg",
+                                    "json_value" : null,
+                                    "section_detail_items" : []
+                                },
+                                {
+                                    "key" : "SUBTITLE",
+                                    "value" : "BEST UNITS AVAILABLE",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "TITLE",
+                                    "value" : "Register Now for Exclusive Offering",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "DESCRIPTION",
+                                    "value" : "✓ Get the latest launch-only prices before the best units are booked at the Tampines St 94 GLS launch.",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "BUTTON",
+                                    "value" : null,
+                                    "json_value" : {
+                                        "title" : "Register Now for Exclusive Offering",
+                                        "subtitle" : "UNLOCK EXCLUSIVE LAUNCH OFFERS",
+                                        "icon" : null,
+                                        "link" : "https://tampinesgls.showflatpreview.sg/#contact"
+                                    }
+                                }   
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key" : "WHAT_IS_NEXT",
+            "sort_order" : 10,
+            "label" : "WHAT IS NEXT",
+            "section_details" : [
+                {
+                    "key" : "TITLE",
+                    "value" : "WHAT IS NEXT?",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                },
+                {
+                    "key" : "LIST",
+                    "value" : null,
+                    "json_value" : null,
+                    "section_detail_items" : [
+                        {            
+                            "sort_order" : 1,
+                            "content" : [
+                                {
+                                    "key" : "SUBTITLE",
+                                    "value" : "YOU ARE HERE",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "TITLE",
+                                    "value" : "OBTAIN YOUR PREVIEW ACCESS",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "DESCRIPTION",
+                                    "value" : "Get everything you need to know about Tampines St 94 GLS before the official preview opens.",
+                                    "json_value" : null
+                                }
+                            ]
+                        },
+                        {            
+                            "sort_order" : 2,
+                            "content" : [
+                                {
+                                    "key" : "SUBTITLE",
+                                    "value" : "NEXT",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "TITLE",
+                                    "value" : "BOOK A PREVIEW SLOT",
+                                    "json_value" : null
+                                },
+                                {
+                                    "key" : "DESCRIPTION",
+                                    "value" : "After you’ve learned more, if you’re interested, book a slot at the official preview to tour the showflat.",
+                                    "json_value" : null
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key" : "DEVELOPED_BY",
+            "sort_order" : 11,
+            "label" : "Developed By",
+            "section_details" : [
+                {
+                    "key" : "BACKGROUND",
+                    "value" : "sample_storage/landscape.jpg",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                },
+                {
+                    "key" : "TITLE",
+                    "value" : "Developed By:",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                },
+                {
+                    "key" : "LOGO",
+                    "value" : "sample_storage/landscape.jpg",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                },
+                {
+                    "key" : "DESCRIPTION",
+                    "value" : "Since 1983, Hoi Hup Realty has built a strong reputation as a trusted property developer in Singapore",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                }
+            ]
+        },
+        {
+            "key" : "FORM_SUBMISSION",
+            "sort_order" : 12,
+            "label" : "Form Submission",
+            "section_details" : [
+                {
+                    "key" : "BACKGROUND",
+                    "value" : "sample_storage/landscape.jpg",
+                    "json_value" : null,
+                    "section_detail_items" : []
+                }
+            ]
+        }
+    ] 
+}

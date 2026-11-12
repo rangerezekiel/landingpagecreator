@@ -1,0 +1,912 @@
+// import Navbar from "@/components/web-template/theme/t01/layout/_navbar"
+// // import Link from "next/link"
+// import Animated from "@/components/animated"
+// import Image from "next/image"
+
+// // React icon 
+// import { FaFingerprint } from "react-icons/fa6"
+// import { FaQuoteLeft } from "react-icons/fa6";
+// import { FaBuilding } from "react-icons/fa6";
+// import { FaLocationDot } from "react-icons/fa6";
+// import { FaRegCalendarCheck } from "react-icons/fa6";
+// import { FaHourglass } from "react-icons/fa6";
+// import { HiHome } from "react-icons/hi";
+// import { FaRegAddressCard } from "react-icons/fa";
+// import { IoGridSharp } from "react-icons/io5";
+// import { IoIosCall } from "react-icons/io";
+// import { FaSun } from "react-icons/fa6";
+// import { FaUnlockKeyhole } from "react-icons/fa6";
+// // end React icon
+
+// // Template Component
+// import ShinyButton from "@/components/web-template/theme/t01/partial/shiny-button"
+// import LocationCarousel from "@/components/web-template/theme/t01/partial/location-carousel"
+// import { CarouselItem } from "@/components/web-template/theme/t01/partial/location-carousel"
+// import UnitTypesAccordion from "@/components/web-template/theme/t01/partial/unit-types-accordion"
+// import FaqAccordion from "@/components/web-template/theme/t01/partial/faq-accordion"
+// import FloorplanItem from "@/components/web-template/theme/t01/partial/floorplan-item"
+// import ContactWizard from "@/components/web-template/theme/t01/partial/contact-wizard"
+// import ParallaxSection from "@/components/web-template/theme/t01/partial/parallax-section"
+// import Footer from "@/components/web-template/theme/t01/layout/_footer"
+// // end Template Component
+
+// // Website data 
+// import { getWebsiteData } from "@/app/_utils/webInfo";
+// import { 
+//     getBannerData,
+//     getHeroData,
+//     getAboutData,
+//     getEBrocureData,
+//     getShowflatViewingData,
+//     getDevelopedByData,
+//     getFormSubmissionData,
+//     getFAQData,
+//     getWhatIsNextData,
+//     getUnitTypesAccordionData,
+//     getNextStepData,
+//     getUnitTypesData,
+//     getLocationData,
+// } from "@/app/_utils/webSection"
+// // end Website data 
+
+// // Section Component
+// import Banner from "@/components/web-template/theme/t01/sections/banner"
+// // end Section Component
+
+// export default async function T01() {
+    
+//     // Data
+//     const webInfo = await getWebsiteData()
+//     const bannerData = await getBannerData()
+//     const heroData = await getHeroData()
+//     const aboutData = await getAboutData()
+//     const eBrocureData = await getEBrocureData()
+//     const showflatViewingData = await getShowflatViewingData()
+//     const developedByData = await getDevelopedByData()
+//     const formSubmissionData = await getFormSubmissionData()
+//     const faqData = await getFAQData()
+//     const whatIsNextData = await getWhatIsNextData()
+//     const unitTypesAccordionData = await getUnitTypesAccordionData()
+//     const nextStepData = await getNextStepData()
+//     const unitTypesData = await getUnitTypesData()
+//     const locationData = await getLocationData()
+//     // end Data
+    
+//     const tampinesLocationData: CarouselItem[] = [
+//         {
+//             id: 1,
+//             title: "TAMPINES WEST MRT",
+//             image: "/assets/theme/t01/future.png",
+//             alt: "Tampines West MRT Station"
+//         },
+//         {
+//             id: 2,
+//             title: "TEMASEK POLYTECHNIC",
+//             image: "/assets/theme/t01/brochure.png",
+//             alt: "Temasek Polytechnic Campus"
+//         },
+//         {
+//             id: 3,
+//             title: "ST HILDA'S PRIMARY SCHOOL",
+//             image: "/assets/theme/t01/future.png",
+//             alt: "St Hilda's Primary School"
+//         },
+//         {
+//             id: 4,
+//             title: "CENTURY SQUARE",
+//             image: "/assets/theme/t01/brochure.png",
+//             alt: "Century Square Shopping Mall"
+//         },
+//         {
+//             id: 5,
+//             title: "BEDOK RESERVOIR PARK",
+//             image: "/assets/theme/t01/future.png",
+//             alt: "Bedok Reservoir Park"
+//         },
+//         {
+//             id: 6,
+//             title: "TAMPINES MALL",
+//             image: "/assets/theme/t01/brochure.png",
+//             alt: "Tampines Mall Shopping Centre"
+//         }
+//     ]
+
+//     return (
+//         <>
+//             <Navbar webInfo={webInfo}/>
+            
+//             <div className="mt-[130px] hidden md:block"/>
+            
+//             {/* Hero */}
+//             {bannerData && bannerData.length > 0 && (
+//                 <Banner data={bannerData} />
+//             )}
+//             {/* end Hero */}
+            
+//             {/* Hero */}
+//             {/* <Animated animation="fade-right" delay={0.2} className="relative">
+//                 <div className="relative h-[calc(95vh-130px)] min-h-[400px] overflow-hidden">
+//                     <Image
+//                         src="/assets/theme/t01/banner-bg.webp"
+//                         alt="Tampines Banner - New Launch Development"
+//                         fill
+//                         className="object-cover"
+//                         priority={false} // Enable lazy loading
+//                         sizes="100vw"
+//                         quality={85}
+//                         placeholder="blur"
+//                         blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+//                     />
+//                     <div className="absolute inset-0 bg-black/50 flex justify-center items-center px-4">
+//                         <div className="container text-white text-center flex flex-col items-center w-fit max-w-4xl">
+//                             <Animated animation="fade-up" delay={0.4}>
+//                                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase leading-tight">
+//                                     Tampines St 94 GLS<br />
+//                                     New Launch
+//                                 </h1>
+//                             </Animated>
+//                             <div className="h-[2px] w-full bg-white my-4 md:my-6"/>
+//                             <Animated animation="fade-down" delay={0.6}>
+//                                 <p className="text-sm sm:text-lg md:text-xl lg:text-2xl uppercase font-bold leading-tight">
+//                                     Prime development only 3 minutes walk to<br className="hidden sm:block"/>
+//                                     Tampines West MRT!
+//                                 </p>
+//                             </Animated>
+//                             <a href="#" className="bg-[#ceb183] text-white w-fit px-4 sm:px-6 md:px-8 py-2 md:py-3 text-sm sm:text-base md:text-lg lg:text-xl font-bold border-2 md:border-3 border-white rounded-full mt-6 md:mt-8 flex items-center justify-center hover:scale-110 transition-transform duration-300 ease-in-out text-center">
+//                                 Book Showflat Viewing Today
+//                             </a>
+//                         </div>
+//                     </div>
+//                 </div>
+
+//                 <p className="absolute bottom-4 md:bottom-6 left-0 w-full text-center text-white text-xs px-4">
+//                     *The information is subject to change and photos/images used are for illustration purposes only.
+//                 </p>
+//             </Animated> */}
+//             {/* end Hero */}
+
+//             {/* Limited */}
+//             <Animated animation="fade-down" delay={0.2} className="relative">
+//                 <div className="relative h-fit overflow-hidden font-bebas-neue tracking-wider">
+//                     <Image
+//                         src="/assets/theme/t01/limited-bg.png"
+//                         alt="Limited Time Offer"
+//                         fill
+//                         className="object-cover absolute"
+//                         priority={false} // Enable lazy loading
+//                         sizes="100vw"
+//                         quality={85}
+//                         placeholder="blur"
+//                         blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+//                     />
+//                     <div className="relative inset-0 bg-black/50 flex justify-center items-center py-12 md:py-20 lg:py-[100px] px-4">
+//                         <div className="container text-white">
+//                             <Animated animation="fade-right" delay={0.4}>
+//                                 <p className="text-lg sm:text-xl md:text-2xl uppercase font-bold mb-5">
+//                                     Limited Time Offer
+//                                 </p>
+//                             </Animated>
+//                             <div className="flex flex-col gap-6 md:gap-10 max-w-full lg:max-w-[580px]">
+//                                 <Animated animation="fade-right" delay={0.5}>
+//                                     <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[58px] font-bold leading-[1.2]">
+//                                         Discover the Ultimate Lifestyle at Tampines Street 94
+//                                     </p>
+//                                 </Animated>
+//                                 <Animated animation="fade-right" delay={0.5}>
+//                                     <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[58px] font-bold leading-[1.2]">
+//                                         Register Your Interest Today!
+//                                     </p>
+//                                 </Animated>
+//                             </div>
+
+//                             <ul className="text-sm md:text-base gap-4 md:gap-5 flex flex-col mt-8 md:mt-10">
+//                                 <li>
+//                                     <Animated animation="fade-right" delay={0.6}>
+//                                         ✓ Tampines Street 94 new launch—3 mins to Tampines West MRT!
+//                                     </Animated>
+//                                 </li>
+//                                 <li>
+//                                     <Animated animation="fade-right" delay={0.7}>
+//                                         ✓ Prime District 18 location with high growth potential!
+//                                     </Animated>
+//                                 </li>
+//                                 <li>
+//                                     <Animated animation="fade-right" delay={0.8}>
+//                                         ✓ Walk to top shopping malls like Century Square & Tampines 1!
+//                                     </Animated>
+//                                 </li>
+//                                 <li>
+//                                     <Animated animation="fade-right" delay={0.9}>
+//                                         ✓ Near Bedok Reservoir Park for nature & recreation!
+//                                     </Animated>
+//                                 </li>
+//                                 <li>
+//                                     <Animated animation="fade-right" delay={1}>
+//                                         ✓ Close to renowned schools like St. Hilda&apos;s & Poi Ching!
+//                                     </Animated>
+//                                 </li>
+//                             </ul>
+
+//                             <ShinyButton>
+//                                 <FaFingerprint />
+//                                 <div className="flex flex-col items-start gap-1 ms-3">
+//                                     <p className="text-base md:text-lg lg:text-xl leading-[1] mb-1">
+//                                         Register for VVIP Access
+//                                     </p>
+//                                     <p className="text-sm md:text-base leading-[1]">
+//                                         Limited Units Available - Act Fast!
+//                                     </p>
+//                                 </div>
+//                             </ShinyButton>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </Animated>
+//             {/* end Limited */}
+
+//             {/* Future Growth Section */}
+//             <Animated animation="fade-up" delay={0.2} className="relative">
+//                 <div className="bg-[#a59d84] py-12 md:py-20 lg:py-[100px] px-4">
+//                     <div className="container">
+//                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-[60px] items-start">
+//                             {/* Left Image */}
+//                             <div className="relative">
+//                                 <Animated animation="fade-right" delay={0.4}>
+//                                     <div className="relative h-[300px] md:h-[400px] lg:h-[347px] overflow-hidden">
+//                                         <Image
+//                                             src="/assets/theme/t01/future.png"
+//                                             alt="Future Growth - Swimming Pool and Development"
+//                                             fill
+//                                             className="object-cover"
+//                                             priority={false}
+//                                             sizes="(max-width: 768px) 100vw, 50vw"
+//                                             quality={85}
+//                                         />
+//                                     </div>
+//                                     <div className="text-white text-xs mt-2">
+//                                         *The information is subject to change and photos/images used are for illustration purposes only.
+//                                     </div>
+//                                 </Animated>
+//                             </div>
+
+//                             {/* Right Content */}
+//                             <div className="text-white">
+//                                 <Animated animation="fade-left" delay={0.5}>
+//                                     <div className="flex flex-col md:flex-row items-start md:items-center mb-6 gap-3 md:gap-5">
+//                                         <FaQuoteLeft className="text-4xl md:text-5xl lg:text-[76px] text-white flex-shrink-0" />
+//                                         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] font-bold leading-tight uppercase font-bebas-neue tracking-wider">
+//                                             FUTURE GROWTH AND<br />
+//                                             INVESTMENT POTENTIAL<br />
+//                                             IN TAMPINES STREET 94
+//                                         </h2>
+//                                     </div>
+//                                 </Animated>
+                                
+//                                 <Animated animation="fade-left" delay={0.6}>
+//                                     <div className="space-y-4 md:space-y-6 text-sm md:text-base leading-relaxed">
+//                                         <p>
+//                                             The Tampines Street 94 new launch by Hoi Hup Realty and Sunway Developments is an exciting mixed-use development located in District 18, featuring 585 residential units on a 99-year leasehold site. Just a short 3-minute walk from Tampines West MRT, this prime location offers excellent connectivity via the Downtown Line, as well as major expressways such as the TPE and PIE. Residents will benefit from easy access to both Changi Airport and the Central Business District (CBD), making it ideal for urban living. The development is thoughtfully designed to combine residential, retail, and lifestyle amenities, presenting a promising investment opportunity with great potential for capital appreciation.
+//                                         </p>
+                                        
+//                                         <p>
+//                                             In addition to its convenient location, residents can enjoy a vibrant lifestyle with close proximity to shopping and dining options at Our Tampines Hub, Century Square, and Bedok Mall. For outdoor activities, Bedok Reservoir Park offers beautiful green spaces, while families will appreciate the nearby top educational institutions, including Temasek Polytechnic and several reputable primary schools like St. Hilda&apos;s Primary School within 1km. With the upcoming Cross Island Line (CRL) further enhancing connectivity, this development is poised to be a highly sought-after residential choice in Singapore&apos;s eastern region.
+//                                         </p>
+//                                     </div>
+//                                 </Animated>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </Animated>
+//             {/* end Future Growth */}
+
+//             {/* Specification */}
+//             <Animated animation="fade-up" delay={0.2} className="relative">
+//                 <div className="py-8 md:py-12 lg:py-[40px] font-bebas-neue tracking-wider">
+//                     <div className="px-4">
+//                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 md:gap-8 lg:gap-[20px]">
+//                             <div className="flex gap-3 md:gap-5 text-[#6A6453] leading-[1] uppercase items-center">
+//                                 <FaBuilding className="text-2xl md:text-3xl lg:text-[40px] text-[#6A6453] min-w-[32px] md:min-w-[40px] lg:min-w-[48px] flex-shrink-0" />
+//                                 <div className="flex flex-col gap-2">
+//                                     <p className="text-lg md:text-xl lg:text-2xl xl:text-[26px] font-bold leading-[0.85]">
+//                                         TAMPINES ST 94 GLS
+//                                     </p> 
+//                                     <p className="text-xs md:text-sm lg:text-base">
+//                                         PROPERTY NAME
+//                                     </p>
+//                                 </div>
+//                             </div>
+
+//                             <div className="flex gap-3 md:gap-5 text-[#6A6453] leading-[1] uppercase items-center">
+//                                 <FaLocationDot className="text-2xl md:text-3xl lg:text-[40px] text-[#6A6453] min-w-[32px] md:min-w-[40px] lg:min-w-[48px] flex-shrink-0" />
+//                                 <div className="flex flex-col gap-2">
+//                                     <p className="text-lg md:text-xl lg:text-2xl xl:text-[26px] font-bold leading-[0.85]">
+//                                         TAMPINES ST 94
+//                                     </p> 
+//                                     <p className="text-xs md:text-sm lg:text-base">
+//                                         ADDRESS NAME
+//                                     </p>
+//                                 </div>
+//                             </div>
+
+//                             <div className="flex gap-3 md:gap-5 text-[#6A6453] leading-[1] uppercase items-center">
+//                                 <FaRegCalendarCheck className="text-2xl md:text-3xl lg:text-[40px] text-[#6A6453] min-w-[32px] md:min-w-[40px] lg:min-w-[48px] flex-shrink-0" />
+//                                 <div className="flex flex-col gap-2">
+//                                     <p className="text-lg md:text-xl lg:text-2xl xl:text-[26px] font-bold leading-[0.85]">
+//                                         2029
+//                                     </p> 
+//                                     <p className="text-xs md:text-sm lg:text-base">
+//                                         EXPECTED T.O.P DATE
+//                                     </p>
+//                                 </div>
+//                             </div>
+
+//                             <div className="flex gap-3 md:gap-5 text-[#6A6453] leading-[1] uppercase items-center">
+//                                 <FaHourglass className="text-2xl md:text-3xl lg:text-[40px] text-[#6A6453] min-w-[32px] md:min-w-[40px] lg:min-w-[48px] flex-shrink-0" />
+//                                 <div className="flex flex-col gap-2">
+//                                     <p className="text-lg md:text-xl lg:text-2xl xl:text-[26px] font-bold leading-[0.85]">
+//                                         99 YEARS
+//                                     </p> 
+//                                     <p className="text-xs md:text-sm lg:text-base">
+//                                         TENURE
+//                                     </p>
+//                                 </div>
+//                             </div>
+
+//                             <div className="flex gap-3 md:gap-5 text-[#6A6453] leading-[1] uppercase items-center">
+//                                 <HiHome className="text-2xl md:text-3xl lg:text-[40px] text-[#6A6453] min-w-[32px] md:min-w-[40px] lg:min-w-[48px] flex-shrink-0" />
+//                                 <div className="flex flex-col gap-2">
+//                                     <p className="text-lg md:text-xl lg:text-2xl xl:text-[26px] font-bold leading-[0.85]">
+//                                         585
+//                                     </p> 
+//                                     <p className="text-xs md:text-sm lg:text-base">
+//                                         TOTAL UNITS
+//                                     </p>
+//                                 </div>
+//                             </div>
+
+//                             <div className="flex gap-3 md:gap-5 text-[#6A6453] leading-[1] uppercase items-center sm:col-span-2 lg:col-span-3 xl:col-span-1">
+//                                 <FaRegAddressCard className="text-2xl md:text-3xl lg:text-[40px] text-[#6A6453] min-w-[32px] md:min-w-[40px] lg:min-w-[48px] flex-shrink-0" />
+//                                 <div className="flex flex-col gap-2">
+//                                     <p className="text-lg md:text-xl lg:text-2xl xl:text-[26px] font-bold leading-[0.85]">
+//                                         Hoi Hup Realty and Sunway Developments
+//                                     </p> 
+//                                     <p className="text-xs md:text-sm lg:text-base">
+//                                         Developer
+//                                     </p>
+//                                 </div>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </Animated>
+//             {/* end Specification */}
+
+//             {/* Brochure */}
+//             <Animated animation="fade-up" delay={0.2} className="relative">
+//                 <div className="py-8 md:py-12 lg:py-[40px] tracking-wider bg-[#ecebde]">
+//                     <div className="container px-4">
+//                         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 md:gap-12 lg:gap-[40px]">
+//                             <div className="flex flex-col gap-5 text-[#3f3d03] order-2 lg:order-1">
+//                                 <Animated animation="fade-right" delay={0.4}>
+//                                     <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[70px] font-bold leading-[1] font-bebas-neue">
+//                                         Get Your Tampines St 94 GLS E-Brochure Now!
+//                                     </p>
+//                                 </Animated>
+//                                 <Animated animation="fade-right" delay={0.5}>
+//                                     <p className="text-sm md:text-base lg:text-lg font-arial">
+//                                         Explore Tampines St 94 GLS in detail with our comprehensive E-Brochure! Discover its impressive amenities and exciting upcoming developments.
+//                                     </p>
+//                                 </Animated>
+
+//                                 <Animated animation="fade-right" delay={0.6}>
+//                                     <a href="#" className="bg-[#ceb183] text-white w-fit px-4 md:px-5 lg:px-[20px] py-2 md:py-3 lg:py-[10px] text-sm md:text-base font-bold rounded-full mt-4 md:mt-[20px] flex items-center justify-center hover:scale-110 transition-transform duration-300 ease-in-out tracking-normal">
+//                                         REQUEST E-BROCHURE
+//                                     </a>
+//                                 </Animated>
+//                             </div>
+//                             <div className="flex flex-col gap-5 order-1 lg:order-2">
+//                                 <Animated animation="fade-left" delay={0.4}>
+//                                     <Image src="/assets/theme/t01/brochure.png" alt="Tampines St 94 GLS E-Brochure" width={500} height={500} className="w-full h-auto" />
+//                                     <small className="text-xs tracking-normal">
+//                                         *The information is subject to change and photos/images used are for illustration purposes only.
+//                                     </small>
+//                                 </Animated>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </Animated>
+//             {/* end Brochure */}
+
+//             {/* Location */}
+//             <Animated animation="fade-up" delay={0.2} className="relative">
+//                 <div className="bg-[#c1baa1] py-8 md:py-12 lg:py-[50px]">
+//                     <div className="container px-4">
+//                         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[70px] font-bebas-neue uppercase font-bold text-white text-center mb-8 md:mb-10 lg:mb-[40px]">
+//                             LOCATION
+//                         </h2>
+                        
+//                         {/* Reusable Location Carousel */}
+//                         <LocationCarousel 
+//                             items={tampinesLocationData}
+//                             slidesToShow={3}
+//                             slidesToScroll={3}
+//                             autoplay={false}
+//                             autoplaySpeed={4000}
+//                             pauseOnHover={true}
+//                             showArrows={false}
+//                         />
+
+//                         <Animated animation="fade-up" delay={0.4}>
+//                             <p className="text-white/70 text-sm text-center mt-2">
+//                                 *The information is subject to change and photos/images used are for illustration purposes only.
+//                             </p>
+//                         </Animated>
+
+//                         <div className="flex flex-col gap-5 mt-8 md:mt-10">
+//                             <Animated animation="fade-up" delay={0.4}>
+//                                 <p className="text-xl sm:text-2xl md:text-3xl lg:text-[34px] font-bebas-neue uppercase font-bold text-white text-center">
+//                                     Tampines Street 94 New Launch Offers Unmatched Convenience at Your Doorstep
+//                                 </p>
+//                             </Animated>
+                            
+//                             <div className="flex flex-col gap-5 font-arial text-center items-center text-white max-w-4xl mx-auto">
+//                                 <div className="flex flex-col gap-2">
+//                                     <Animated animation="fade-up" delay={0.4}>
+//                                         <p className="font-bold text-sm md:text-base">
+//                                             Prime Location at Tampines Street 94
+//                                         </p>
+//                                     </Animated>
+//                                     <Animated animation="fade-up" delay={0.5}>
+//                                         <p className="text-sm md:text-base">
+//                                             Mixed-use development near Tampines West MRT, offering seamless connectivity in District 18.
+//                                         </p>
+//                                     </Animated>
+//                                 </div>
+//                                 <div className="flex flex-col gap-2">
+//                                     <Animated animation="fade-up" delay={0.4}>
+//                                         <p className="font-bold text-sm md:text-base">
+//                                             Excellent Public Transport Access
+//                                         </p>
+//                                     </Animated>
+//                                     <Animated animation="fade-up" delay={0.5}>
+//                                         <p className="text-sm md:text-base">
+//                                             3-minute walk to Tampines West MRT and easy access to major expressways like PIE & TPE.
+//                                         </p>
+//                                     </Animated>
+//                                 </div>
+//                                 <div className="flex flex-col gap-2">
+//                                     <Animated animation="fade-up" delay={0.4}>
+//                                         <p className="font-bold text-sm md:text-base">
+//                                             Top Shopping & Dining Hub
+//                                         </p>
+//                                     </Animated>
+//                                     <Animated animation="fade-up" delay={0.5}>
+//                                         <p className="text-sm md:text-base">
+//                                             Close to Tampines 1, Century Square, and Our Tampines Hub for endless retail and F&B options.
+//                                         </p>
+//                                     </Animated>
+//                                 </div>
+//                                 <div className="flex flex-col gap-2">
+//                                     <Animated animation="fade-up" delay={0.4}>
+//                                         <p className="font-bold text-sm md:text-base">
+//                                             Green & Recreational Spaces
+//                                         </p>
+//                                     </Animated>
+//                                     <Animated animation="fade-up" delay={0.5}>
+//                                         <p className="text-sm md:text-base">
+//                                             Next to Bedok Reservoir Park, it is perfect for outdoor activities and a refreshing lifestyle.
+//                                         </p>
+//                                     </Animated>
+//                                 </div>
+//                                 <div className="flex flex-col gap-2">
+//                                     <Animated animation="fade-up" delay={0.4}>
+//                                         <p className="font-bold text-sm md:text-base">
+//                                             Renowned Schools Nearby
+//                                         </p>
+//                                     </Animated>
+//                                     <Animated animation="fade-up" delay={0.5}>
+//                                         <p>
+//                                             Within 1km of St. Hilda’s Primary and Poi Ching School, ensuring quality education for families.
+//                                         </p>
+//                                     </Animated>
+//                                 </div>
+//                                 <Animated animation="fade-up" delay={0.6}>
+//                                     <a href="#" className="bg-[#ceb183] text-white w-fit px-4 md:px-5 lg:px-[20px] py-2 md:py-3 lg:py-[10px] text-sm md:text-base font-bold rounded-full mt-4 md:mt-[20px] flex items-center justify-center hover:scale-110 transition-transform duration-300 ease-in-out tracking-normal">
+//                                         REQUEST YOUR INTEREST
+//                                     </a>
+//                                 </Animated>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </Animated>
+//             {/* end Location */}
+
+//             {/* Unit Type */}
+//             <Animated animation="fade-up" delay={0.2} className="relative">
+//                 <div className="py-8 md:py-12 lg:py-[40px] bg-[#a59e85]">
+//                     <div className="container px-4">
+//                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+//                             {/* Left - Image */}
+//                             <div className="order-2 lg:order-1">
+//                                 <Animated animation="fade-right" delay={0.4}>
+//                                     <div className="relative h-[400px] md:h-[500px] lg:h-[600px] xl:h-[845px] rounded-t-full overflow-hidden flex justify-center items-center bg-white/10">
+//                                         <Image 
+//                                             src="/assets/theme/t01/book-faq.png" 
+//                                             alt="Tampines St 94 GLS Unit Type" 
+//                                             width={500} 
+//                                             height={500} 
+//                                             className="w-auto h-full object-cover" 
+//                                         />
+//                                     </div>
+//                                 </Animated>
+//                             </div>
+
+//                             {/* Right - Content */}
+//                             <div className="order-1 lg:order-2 text-white">
+//                                 <Animated animation="fade-left" delay={0.4}>
+//                                     <div className="mb-8 md:mb-12">
+//                                         <IoGridSharp className="mb-4" />
+//                                         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[86px] font-bold leading-[0.8] font-bebas-neue tracking-[2px] md:tracking-[2.5px]">
+//                                             UNIT <br/>
+//                                             TYPES
+//                                         </h2>
+//                                         <div className="font-bebas-neue tracking-[2px] md:tracking-[2.5px] mt-4">
+//                                             <p className="text-sm md:text-base lg:text-[16px] leading-[1] mb-2">
+//                                                 TAMPINES ST 94 GLS PRICING
+//                                             </p>
+//                                             <p className="text-xs md:text-sm lg:text-[12px] leading-[1] opacity-80">
+//                                                 *SUBJECT TO CHANGE & AVAILABILITY
+//                                             </p>
+//                                         </div>
+//                                     </div>
+//                                 </Animated>
+
+//                                 {/* Accordion */}
+//                                 <UnitTypesAccordion />
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </Animated>
+//             {/* end Unit Type */}
+
+//             {/* Floor Plan */}
+//             <Animated animation="fade-up" delay={0.2} className="relative">
+//                 <div className="py-12 md:py-16 lg:py-20 bg-[#C1BAA1]">
+//                     <div className="container px-4">
+//                         {/* Header */}
+//                         <div className="flex flex-col md:flex-row justify-between items-center md:items-center mb-8 md:mb-12 lg:mb-16">
+//                             <Animated animation="fade-right" delay={0.4}>
+//                                 <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bebas-neue font-normal text-[#39362C] uppercase tracking-wider mb-4 md:mb-0">
+//                                     TAMPINES ST 94 GLS
+//                                     FLOORPLANS
+//                                 </h2>
+//                             </Animated>
+
+//                             <Animated animation="fade-left" delay={0.6}>
+//                                 <a href="#" className="bg-[transparent] border border-white shadow-[0px_0px_10px_0px_rgba(255,249,241,0.48)] text-black w-fit px-4 md:px-5 lg:px-[20px] py-2 md:py-3 lg:py-[10px] text-sm md:text-base rounded-full mt-4 md:mt-[20px] flex items-center justify-center hover:scale-110 transition-transform duration-300 ease-in-out tracking-normal">
+//                                     DOWNLOAD ALL FLOOR PLAN
+//                                 </a>
+//                             </Animated>
+//                         </div>
+
+//                         {/* Floor Plan Grid */}
+//                         <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+//                             {/* 1 Bedroom */}
+//                             <Animated animation="fade-up" delay={0.4} className="w-full md:w-[calc((100%-2rem)/2)] xl:w-[calc((100%-4rem)/3)]">
+//                                 <FloorplanItem
+//                                     image="/assets/theme/t01/floorplans-1.jpg"
+//                                     title="TAMPINES ST 94 GLS FLOORPLANS - 1 BEDROOM"
+//                                     // link="#"
+//                                 />
+//                             </Animated>
+
+//                             {/* 2 Bedroom */}
+//                             <Animated animation="fade-up" delay={0.4} className="w-full md:w-[calc((100%-2rem)/2)] xl:w-[calc((100%-4rem)/3)]">
+//                                 <FloorplanItem
+//                                     image="/assets/theme/t01/floorplans-2.jpg"
+//                                     title="TAMPINES ST 94 GLS FLOORPLANS - 2 BEDROOM"
+//                                     // link="#"
+//                                 />
+//                             </Animated>
+
+//                             {/* 3 Bedroom */}
+//                             <Animated animation="fade-up" delay={0.4} className="w-full md:w-[calc((100%-2rem)/2)] xl:w-[calc((100%-4rem)/3)]">
+//                                 <FloorplanItem
+//                                     image="/assets/theme/t01/floorplans-3.jpg"
+//                                     title="TAMPINES ST 94 GLS FLOORPLANS - 3 BEDROOM"
+//                                     // link="#"
+//                                 />
+//                             </Animated>
+
+//                             {/* 4 Bedroom */}
+//                             <Animated animation="fade-up" delay={0.4} className="w-full md:w-[calc((100%-2rem)/2)] xl:w-[calc((100%-4rem)/3)]">
+//                                 <FloorplanItem
+//                                     image="/assets/theme/t01/floorplans-4.jpg"
+//                                     title="TAMPINES ST 94 GLS FLOORPLANS - 4 BEDROOM"
+//                                     // link="#"
+//                                 />
+//                             </Animated>
+//                         </div>
+
+//                         <Animated animation="fade-up" delay={0.4} className="mt-10">
+//                             <p className="text-[10px]">
+//                                 *The information is subject to change and photos/images used are for illustration purposes only.
+//                             </p>
+//                         </Animated>
+//                     </div>
+//                 </div>
+//             </Animated>
+//             {/* end Floor Plan */}
+
+//             {/* Showflat Viewing */}
+//             <Animated animation="fade-up" delay={0.2} className="relative">
+//                 <div className="py-8 md:py-12 lg:py-[40px] tracking-wider bg-[#FFFFFF]">
+//                     <div className="container px-4">
+//                         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 md:gap-12 lg:gap-[40px]">
+//                             <div className="flex flex-col gap-5 order-1 lg:order-1">
+//                                 <Animated animation="fade-left" delay={0.4}>
+//                                     <Image src="/assets/theme/t01/showflat.png" alt="Tampines St 94 GLS Showflat" width={500} height={500} className="w-full h-auto" />
+//                                     <small className="text-xs tracking-normal">
+//                                         *The information is subject to change and photos/images used are for illustration purposes only.
+//                                     </small>
+//                                 </Animated>
+//                             </div>
+//                             <div className="flex flex-col items-end gap-5 text-[#625950] order-2 text-end">
+//                                 <Animated animation="fade-right" delay={0.4}>
+//                                     <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[70px] font-bold leading-[1] font-bebas-neue">
+//                                         SHOWFLAT VIEWING
+//                                     </p>
+//                                 </Animated>
+//                                 <Animated animation="fade-right" delay={0.5}>
+//                                     <p className="text-sm md:text-base lg:text-[16px] font-arial">
+//                                         Tampines St 94 GLS Sales Gallery is Strictly by Appointment only.
+//                                         <br />
+//                                         Contact us now to receive your invitation to visit our showflat.
+//                                     </p>
+//                                 </Animated>
+
+//                                 <Animated animation="fade-right" delay={0.6}>
+//                                     <a href="#" className="bg-[#ceb183] text-white w-fit px-4 md:px-5 lg:px-[20px] py-2 md:py-3 lg:py-[10px] text-sm md:text-base font-bold rounded-full mt-4 md:mt-[20px] flex items-center justify-center hover:scale-110 transition-transform duration-300 ease-in-out tracking-normal">
+//                                         <IoIosCall className="mr-2" />
+//                                         SHOWFLAT HOTLINE: +65 9876 5023
+//                                     </a>
+//                                 </Animated>
+//                                 <Animated animation="fade-right" delay={0.6}>
+//                                     <a href="#" className="bg-[#ceb183] text-white w-fit px-4 md:px-5 lg:px-[20px] py-2 md:py-3 lg:py-[10px] text-sm md:text-base font-bold rounded-full mt-4 md:mt-[5px] flex items-center justify-center hover:scale-110 transition-transform duration-300 ease-in-out tracking-normal">
+//                                         REQUEST SHOWFLAT VIEWING
+//                                     </a>
+//                                 </Animated>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </Animated>
+//             {/* end Showflat Viewing */}
+
+//             {/* FAQ */}
+//             <Animated animation="fade-up" delay={0.2} className="relative">
+//                 <div className="py-8 md:py-12 lg:py-[40px] bg-[#A59D84]">
+//                     <div className="container px-4">
+//                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+//                             {/* Left - Image */}
+//                             <div className="order-1 lg:order-1 text-white">
+//                                 <Animated animation="fade-left" delay={0.4}>
+//                                     <div className="mb-8 md:mb-12">
+//                                         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[86px] font-bold leading-[0.8] font-bebas-neue tracking-[2px] md:tracking-[2.5px]">
+//                                             FAQ
+//                                         </h2>
+//                                     </div>
+//                                 </Animated>
+
+//                                 {/* Accordion */}
+//                                 <FaqAccordion />
+//                             </div>
+
+//                             {/* Right - Content */}
+//                             <div className="order-2 lg:order-2">
+//                                 <Animated animation="fade-up" delay={0.4}>
+//                                     <div className="relative h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] overflow-hidden flex justify-center items-center">
+//                                         <Image 
+//                                             src="/assets/theme/t01/location.png" 
+//                                             alt="Tampines St 94 GLS Unit Type" 
+//                                             width={500} 
+//                                             height={500} 
+//                                             className="w-auto h-full object-cover" 
+//                                         />
+//                                     </div>
+//                                     <p className="text-[10px] font-arial text-center text-white mt-5">  
+//                                         *The information is subject to change and photos/images used are for illustration purposes only.
+//                                     </p>
+//                                 </Animated>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </Animated>
+//             {/* end FAQ*/}
+
+//             {/* Next Step */}
+//             <Animated animation="fade-up" delay={0.2} className="relative">
+//                 <div className="py-8 md:py-12 lg:py-[40px] bg-[#5B5B4F]">
+//                     <div className="container px-4">
+//                         <div className="flex flex-col gap-5 text-center items-center">
+//                             <Animated animation="fade-up" delay={0.4}>
+//                                 <FaSun className="text-white text-[50px] mb-3"/>
+//                             </Animated>
+
+//                             <Animated animation="fade-up" delay={0.5}>
+//                                 <p className="text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[73px] font-bold font-bebas-neue leading-[0.8]">
+//                                 HOW DO YOU <br/>
+//                                 WANT TO <br/>
+//                                 THE NEXT <br/>
+//                                 STEP
+//                                 </p>
+//                             </Animated>
+
+//                             <Animated animation="fade-up" delay={0.6}>
+//                                 <p className="text-white text-[18px] leading-[1]">
+//                                     The Tampines St 94 GLS is coming soon in, <br/>
+//                                     here’s how you can learn more: 
+//                                 </p>
+//                             </Animated>
+
+//                             {/* Top Content */}
+//                             <div className="flex flex-col md:flex-row justify-center gap-5 md:gap-[20px] w-full mt-10">
+//                                 <Animated animation="fade-up" delay={0.6} className="w-full max-w-[526px] relative before:content-['*'] before:absolute before:w-full before:h-full before:bg-black/30 before:top-0 before:left-0 before:rounded-[15px]">
+//                                     <div className="w-full min-h-[420px] md:min-h-[520px] lg:min-h-[593px] shadow-[0_0_10px_0_#000] rounded-[15px] overflow-hidden bg-[url('/assets/theme/t01/next-step-preview-access.png')] p-10 flex flex-col items-center">
+//                                         <p className="relative text-white font-bebas-neue text-[20px] uppercase">
+//                                             SUBSCRIBE NOW FOR FIRSTHAND INFORMATION
+//                                         </p>
+//                                         <p className="relative text-white font-bebas-neue text-[34px] lg:text-[83px] leading-[.85] uppercase font-bold mt-5">
+//                                             GET PREVIEW ACCESS
+//                                         </p>
+//                                         <p className="relative font-roboto text-[16px] leading-[1.5] mt-5 text-white max-w-[355px] font-[500]">
+//                                             ✓ Get the E-Brochure +  Floor Plans + Viewing Invitation the moment they are released by the developer!
+//                                         </p>
+
+
+//                                         <ShinyButton className="relative bg-gradient-to-b from-[#ffa702] via-[#ffa702] to-[#ffcb6a] mt-15 h-fit rounded-[15px] !py-0" contentClassName="flex gap-4 py-[15px] uppercase">
+//                                             <FaUnlockKeyhole className="text-[30px]" />
+//                                             <p className="flex flex-col">
+//                                                 <strong className="text-[20px]">
+//                                                     GET PREVIEW ACCESS
+//                                                 </strong>
+//                                                 <small className="text-[16px]">
+//                                                     PREVIEW INVITE + PRICE LIST + FLOOR PLANS
+//                                                 </small>
+//                                             </p>
+//                                         </ShinyButton>
+//                                     </div>
+//                                 </Animated>
+
+//                                 <Animated animation="fade-up" delay={0.8} className="w-full max-w-[526px] relative before:content-['*'] before:absolute before:w-full before:h-full before:bg-black/30 before:top-0 before:left-0 before:rounded-[15px]">
+//                                     <div className="w-full min-h-[420px] md:min-h-[520px] lg:min-h-[593px] shadow-[0_0_10px_0_#000] rounded-[15px] overflow-hidden bg-[url('/assets/theme/t01/next-step-register.png')] p-10 flex flex-col items-center">
+//                                         <p className="relative text-white font-bebas-neue text-[20px] uppercase">
+//                                             BEST UNITES AVAILABLE
+//                                         </p>
+//                                         <p className="relative text-white font-bebas-neue text-[34px] lg:text-[83px] leading-[.85] uppercase font-bold mt-5">
+//                                             REGISTER NOW FOR EXCLUSIVE OFFERING
+//                                         </p>
+//                                         <p className="relative font-roboto text-[16px] leading-[1.5] mt-5 text-white max-w-[355px] font-[500]">
+//                                             ✓ Get the latest launch-only prices before the best units are booked at the Tampines St 94 GLS launch.
+//                                         </p>
+
+
+//                                         <ShinyButton className="relative bg-gradient-to-b from-[#ffa702] via-[#ffa702] to-[#ffcb6a] mt-15 h-fit rounded-[15px] !py-0" contentClassName="flex gap-4 py-[15px] uppercase">
+//                                             <FaFingerprint className="text-[30px]" />
+//                                             <p className="flex flex-col">
+//                                                 <strong className="text-[20px]">
+//                                                     Register Now for Exclusive Offering
+//                                                 </strong>
+//                                                 <small className="text-[16px]">
+//                                                     UNLOCK EXCLUSIVE LAUNCH OFFERS
+//                                                 </small>
+//                                             </p>
+//                                         </ShinyButton>
+//                                     </div>
+//                                 </Animated>
+//                             </div>
+//                             {/* end Top Content */}
+
+
+//                             {/* Bottom Content */}
+//                             <div className="flex flex-col md:flex-row gap-6 md:gap-[40px] mt-[60px] md:mt-[100px] w-full md:justify-start">
+//                                 <Animated animation="fade-left" delay={0.4}>
+//                                     <p className="flex justify-center md:justify-start text-center md:text-left text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[90px] font-bold font-bebas-neue leading-[1.2] md:text-nowrap">
+//                                         What is<br/>
+//                                         Next?
+//                                     </p>
+//                                 </Animated>
+//                                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-[20px] w-full">
+//                                     <Animated animation="fade-up" delay={0.6} className="w-full">
+//                                         <div className="rounded-[15px] pt-[70px] px-[10px] pb-[100px] flex flex-col items-center bg-[#ffa600] h-full">
+//                                             <p className="uppercase font-roboto text-[16px] font-bold text-white">
+//                                                 You Are Here
+//                                             </p>
+//                                             <p className="uppercase text-3xl sm:text-4xl md:text-5xl xl:text-[66px] font-bold font-bebas-neue leading-[0.8] mt-5 mb-10">
+//                                                 OBTAIN YOUR PREVIEW ACCESS
+//                                             </p>
+//                                             <p className="font-roboto text-[16px] leading-[1.5] text-white max-w-[355px] font-[500]">
+//                                                 Get everything you need to know about Tampines St 94 GLS before the official preview opens.
+//                                             </p>
+//                                         </div>
+//                                     </Animated>
+//                                     <Animated animation="fade-up" delay={0.8} className="w-full">
+//                                         <div className="rounded-[15px] pt-[70px] px-[10px] pb-[100px] flex flex-col items-center bg-[#464E6E] h-full">
+//                                             <p className="uppercase font-roboto text-[16px] font-bold text-white">
+//                                                 Next
+//                                             </p>
+//                                             <p className="uppercase text-3xl sm:text-4xl md:text-5xl xl:text-[66px] text-white font-bold font-bebas-neue leading-[0.8] mt-5 mb-10">
+//                                                 BOOK A PREVIEW SLOT
+//                                             </p>
+//                                             <p className="font-roboto text-[16px] leading-[1.5] text-white max-w-[355px] font-[500]">
+//                                                 After you’ve learned more, if you’re interested, book a slot at the official preview to tour the showflat.
+//                                             </p>
+//                                         </div>
+//                                     </Animated>
+//                                     <Animated animation="fade-up" delay={1} className="w-full">
+//                                         <div className="rounded-[15px] pt-[70px] px-[10px] pb-[100px] flex flex-col items-center bg-[#464E6E] h-full">
+//                                             <p className="uppercase font-roboto text-[16px] font-bold text-white">
+//                                                 Finally
+//                                             </p>
+//                                             <p className="uppercase text-3xl sm:text-4xl md:text-5xl xl:text-[66px] text-white font-bold font-bebas-neue leading-[0.8] mt-5 mb-10">
+//                                                 BALLOT AND PURCHASE UNITS
+//                                             </p>
+//                                             <p className="font-roboto text-[16px] leading-[1.5] text-white max-w-[355px] font-[500]">
+//                                                 Get everything you need to know about Tampines St 94 GLS before the official preview opens.
+//                                             </p>
+//                                         </div>
+//                                     </Animated>
+//                                 </div>
+//                             </div>
+//                             {/* end Bottom Content */}
+//                         </div>
+//                     </div>
+//                 </div>
+//             </Animated>
+//             {/* end Next Step */}
+
+//             {/* Developer */}
+//             <div className="relative before:content-[''] before:w-full before:h-[60%] before:absolute before:bottom-0 before:left-0 before:bg-gradient-to-t before:from-black/90 before:via-black/60 to-transparent">
+//                 <ParallaxSection 
+//                     src="/assets/theme/t01/bg-developer.jpg" 
+//                     alt="Developer Background" 
+//                     className="py-8 md:py-12 lg:py-[40px] h-[941px]" 
+//                     strength={600}
+//                 >
+//                     <div className="container px-4 flex flex-col items-center h-full justify-end relative pb-30">
+//                         <p className="text-[32px] font-bold font-roboto text-white mb-5">
+//                             Developed By:
+//                         </p>
+
+//                         <Image src="/assets/theme/t01/hoi-hup.png" alt="Developer" width={388} height={133} />
+
+//                         <p className="font-[14px] font-arial text-white w-full max-w-[768px] text-center leading-[1.2] mx-auto mt-10">
+//                             Since 1983, Hoi Hup Realty has built a strong reputation as a trusted property developer in Singapore, delivering a diverse range of projects, including mixed-use developments, landed homes, and commercial spaces. Their commitment to quality has earned them numerous awards over the years. Similarly, Sunway Group is renowned for its exceptional craftsmanship and stands as one of Malaysia’s largest conglomerates, with operations spanning 50 locations worldwide.
+
+//                         </p>
+//                     </div>
+//                 </ParallaxSection>
+//             </div>
+//             {/* end Developer */}
+
+//             {/* Form Contact */}
+//             <Animated animation="fade-up" delay={0.2} className="relative">
+//                 <div id="contact" className="relative h-[941px] flex items-center py-12 md:py-16 lg:py-20 bg-[url('/assets/theme/t01/bg-contact.jpg')] bg-cover bg-center before:content-[''] before:w-full before:h-full before:absolute before:bottom-0 before:left-0 before:bg-gradient-to-t before:bg-black/25 to-transparent">
+//                     <div className="container px-4 flex justify-center h-full">
+//                         <ContactWizard />
+//                     </div>
+//                 </div>
+//             </Animated>
+//             {/* end Form Contact */}
+
+//             {/* Footer */}
+//             <Footer />
+//             {/* end Footer */}
+//         </>
+//     )
+// }
